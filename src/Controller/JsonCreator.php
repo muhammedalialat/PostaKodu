@@ -81,8 +81,6 @@ class JsonCreator
             $quarter = new Quarter($csvData->getQuarter(), $csvData->getZip());
             $this->currentProvince->getLastCity()->getLastDistrict()->addQuarter($quarter);
         }
-
-        # $this->persistProvince($province, $zip);
     }
 
     protected function persistProvince()

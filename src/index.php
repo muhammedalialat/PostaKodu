@@ -8,24 +8,40 @@ use PostaKodu\Controller\JsonCreator;
 $jsonCreator = new JsonCreator();
 */
 
-class index {
+class index
+{
     public $directory = 'Data';
 
-    public function run() {
+    public function run()
+    {
         $url = trim($_SERVER['REQUEST_URI'], '/');
-        $urlParameters = explode('/', $url);
 
         $filename = $this->directory . '/' . $url . '.json';
 
-        header("Content-type: application/json; charset=utf-8");
-
         if (file_exists($filename)) {
+            header("Content-type: application/json; charset=utf-8");
             echo file_get_contents($filename);
+        } else {
+            $this->printUsage();
         }
-
-
-#        echo json_encode($cities[$urlParameters[0]-1], JSON_PRETTY_PRINT);
     }
+
+    public function printUsage()
+    {
+        echo '<html><head><title>PostKodu MicroService</title></head>
+        <body>
+            <p>Usage:</br><strong><a href="http://localhost/61">http://localhost/61</a></strong></p>
+            <p>Where
+                <ul>
+                    <li><strong>http</strong> is the protocol of your current Web Server.</li>
+                    <li><strong>localhost</strong> is the address of your current Web Server.</li>
+                    <li><strong>61</strong> is the Province Id your are searching for.
+                        <ul><li>In this case <strong>61</strong> stands for Trabzon.</liIn></ul>
+                    </li>
+                </ul>
+        </body></html>';
+    }
+
 }
 
 $index = new index();
