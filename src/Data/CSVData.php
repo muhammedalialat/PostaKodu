@@ -79,5 +79,4 @@ class CSVData
 
         return (int) $id;
     }
-
 }

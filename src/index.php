@@ -28,7 +28,7 @@ class index
 
     public function printUsage()
     {
-        echo '<html><head><title>PostKodu MicroService</title></head>
+        echo '<html><head><title>PostaKodu MicroService</title></head>
         <body>
             <p>Usage:</br><strong><a href="http://localhost/61">http://localhost/61</a></strong></p>
             <p>Where
@@ -41,7 +41,6 @@ class index
                 </ul>
         </body></html>';
     }
-
 }
 
 $index = new index();

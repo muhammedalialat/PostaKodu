@@ -1,13 +1,6 @@
 <?php
-
 namespace PostaKodu\Model;
 
-/**
- * Created by PhpStorm.
- * User: alat
- * Date: 27.05.17
- * Time: 00:10
- */
 class Province implements \JsonSerializable
 {
 

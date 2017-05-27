@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alat
- * Date: 26.05.17
- * Time: 23:49
- */
-
 namespace PostaKodu\Controller;
 
 use PostaKodu\Data\CSVData;
