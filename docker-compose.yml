@@ -1,0 +1,8 @@
+version: '2'
+services:
+  microservice:
+    build: ./docker/php
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html

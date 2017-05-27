@@ -1,0 +1,9 @@
+{
+  "autoload": {
+    "psr-4": {"PostaKodu\\": "."}
+  },
+
+  "require": {
+    "php": "^7.0"
+  }
+}

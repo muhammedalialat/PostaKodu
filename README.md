@@ -1,0 +1,1 @@
+# Easy setup running PHP in docker
